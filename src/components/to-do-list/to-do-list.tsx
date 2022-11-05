@@ -1,12 +1,14 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useContext, useWatch$ } from '@builder.io/qwik';
+import { ToDoContext } from '~/contexts/to-do.context';
 
 export const ToDoList = component$(() => {
-  const toDos = ["abc", "def", "ghi"]
+  const todoStore = useContext(ToDoContext)
+
   return (
     <>
       <h2>{"To Do List"}</h2>
       <ul>
-        {toDos.map(item => <li>{item}</li>)}
+        {todoStore.todos.map(item => <li>{item}</li>)}
       </ul>
     </>
   );
