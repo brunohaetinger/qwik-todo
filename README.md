@@ -75,3 +75,4 @@ npm run build # or `yarn build`
 
 - I had to restart Vite to get some changes really applied. There was a new button and it was triggering a anonymous function from a pre-existing button. (pretty weird)
 - Couldn't add a `Symbol()` (to be used as ToDo item id) inside the store because it's not a primitive or object primitive, so it couldn't be serializable.
+
